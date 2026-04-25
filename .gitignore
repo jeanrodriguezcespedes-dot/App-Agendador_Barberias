@@ -1,0 +1,7 @@
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Preparación para Fase 3 (React y Node)
+node_modules/
+.env
