@@ -4,30 +4,296 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeautyBook | Agendamiento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <h1>BeautyBook</h1>
-            <ul>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#agendar">Agendar Cita</a></li>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">BeautyBook</a>
+            <ul class="nav__list">
+                <li><a href="#servicios" class="nav__link">Servicios</a></li>
+                <li><a href="#agendar" class="nav__link nav__link--cta">Agendar Cita</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <h2>Tu estilo, a tu tiempo</h2>
-            <p>Reserva tu cita con los mejores profesionales.</p>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1 class="hero__title">Tu estilo, a tu tiempo</h1>
+                <p class="hero__subtitle">Reserva tu cita con los mejores profesionales de la ciudad. Rápido, fácil y sin complicaciones.</p>
+                <a href="#agendar" class="btn btn--primary">Agendar Ahora</a>
+            </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 BeautyBook. Todos los derechos reservados.</p>
-    </footer>
+        <!-- Servicios Section -->
+        <section id="servicios" class="servicios section">
+            <div class="container">
+                <h2 class="section__title">Nuestros Servicios</h2>
+                <p class="section__subtitle">Elige el servicio perfecto para tu look</p>
+                
+                <div class="servicios__grid">
+                    <!-- Tarjeta 1 -->
+                    <article class="card card--service">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        </div>
+                        <h3 class="card__title">Corte de Cabello</h3>
+                        <p class="card__description">Corte clásico o moderno con acabado premium y lavado incluido.</p>
+                        <div class="card__meta">
+                            <span class="card__price">$25.000</span>
+                            <span class="card__duration">45 min</span>
+                        </div>
+                        <button class="btn btn--outline btn--small">Seleccionar</button>
+                    </article>
 
-</body>
-</html>
+                    <!-- Tarjeta 2 -->
+                    <article class="card card--service">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/><line x1="8" y1="10" x2="16" y2="10"/></svg>
+                        </div>
+                        <h3 class="card__title">Arreglo de Barba</h3>
+                        <p class="card__description">Diseño y mantenimiento de barba con toalla caliente y productos.</p>
+                        <div class="card__meta">
+                            <span class="card__price">$18.000</span>
+                            <span class="card__duration">30 min</span>
+                        </div>
+                        <button class="btn btn--outline btn--small">Seleccionar</button>
+                    </article>
+
+                    <!-- Tarjeta 3 -->
+                    <article class="card card--service">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="card__title">Combo Corte + Barba</h3>
+                        <p class="card__description">La experiencia completa: corte de cabello y arreglo de barba.</p>
+                        <div class="card__meta">
+                            <span class="card__price">$38.000</span>
+                            <span class="card__duration">75 min</span>
+                        </div>
+                        <button class="btn btn--outline btn--small">Seleccionar</button>
+                    </article>
+
+                    <!-- Tarjeta 4 -->
+                    <article class="card card--service">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h3 class="card__title">Tratamiento Facial</h3>
+                        <p class="card__description">Limpieza profunda, exfoliación e hidratación para tu rostro.</p>
+                        <div class="card__meta">
+                            <span class="card__price">$30.000</span>
+                            <span class="card__duration">60 min</span>
+                        </div>
+                        <button class="btn btn--outline btn--small">Seleccionar</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flujo de Agendamiento -->
+        <section id="agendar" class="agendar section">
+            <div class="container">
+                <h2 class="section__title">Reserva tu Cita</h2>
+                <p class="section__subtitle">Sigue los pasos para agendar en minutos</p>
+
+                <!-- Stepper -->
+                <div class="stepper">
+                    <div class="stepper__step stepper__step--active">
+                        <div class="stepper__circle">1</div>
+                        <span class="stepper__label">Servicio</span>
+                    </div>
+                    <div class="stepper__line"></div>
+                    <div class="stepper__step">
+                        <div class="stepper__circle">2</div>
+                        <span class="stepper__label">Profesional</span>
+                    </div>
+                    <div class="stepper__line"></div>
+                    <div class="stepper__step">
+                        <div class="stepper__circle">3</div>
+                        <span class="stepper__label">Fecha y Hora</span>
+                    </div>
+                    <div class="stepper__line"></div>
+                    <div class="stepper__step">
+                        <div class="stepper__circle">4</div>
+                        <span class="stepper__label">Confirmación</span>
+                    </div>
+                </div>
+
+                <!-- Panel de Agendamiento -->
+                <div class="agendar__panel">
+                    <!-- Paso 1: Servicio (Visible por defecto en estático) -->
+                    <div class="agendar__step-content">
+                        <h3 class="agendar__step-title">¿Qué servicio necesitas?</h3>
+                        <div class="agendar__options">
+                            <label class="option-card option-card--selected">
+                                <input type="radio" name="servicio" checked>
+                                <span class="option-card__title">Corte de Cabello</span>
+                                <span class="option-card__info">$25.000 · 45 min</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="servicio">
+                                <span class="option-card__title">Arreglo de Barba</span>
+                                <span class="option-card__info">$18.000 · 30 min</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="servicio">
+                                <span class="option-card__title">Combo Corte + Barba</span>
+                                <span class="option-card__info">$38.000 · 75 min</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Profesional -->
+                    <div class="agendar__step-content">
+                        <h3 class="agendar__step-title">Selecciona un profesional</h3>
+                        <div class="profesionales__grid profesionales__grid--compact">
+                            <article class="card card--professional card--selected">
+                                <div class="card__avatar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Carlos Méndez">
+                                </div>
+                                <h4 class="card__name">Carlos Méndez</h4>
+                                <p class="card__role">Especialista en fades</p>
+                                <div class="card__rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(124 reseñas)</span>
+                                </div>
+                            </article>
+                            <article class="card card--professional">
+                                <div class="card__avatar">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" alt="Andrés López">
+                                </div>
+                                <h4 class="card__name">Andrés López</h4>
+                                <p class="card__role">Barbero clásico</p>
+                                <div class="card__rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="reviews">(98 reseñas)</span>
+                                </div>
+                            </article>
+                            <article class="card card--professional">
+                                <div class="card__avatar">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Diego Ruiz">
+                                </div>
+                                <h4 class="card__name">Diego Ruiz</h4>
+                                <p class="card__role">Color y textura</p>
+                                <div class="card__rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">(156 reseñas)</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Fecha y Hora -->
+                    <div class="agendar__step-content">
+                        <h3 class="agendar__step-title">Elige fecha y hora</h3>
+                        <div class="calendar">
+                            <div class="calendar__header">
+                                <button class="calendar__nav"><</button>
+                                <span class="calendar__month">Enero 2026</span>
+                                <button class="calendar__nav">></button>
+                            </div>
+                            <div class="calendar__weekdays">
+                                <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
+                            </div>
+                            <div class="calendar__days">
+                                <span class="calendar__day calendar__day--disabled">29</span>
+                                <span class="calendar__day calendar__day--disabled">30</span>
+                                <span class="calendar__day calendar__day--disabled">31</span>
+                                <span class="calendar__day">1</span>
+                                <span class="calendar__day">2</span>
+                                <span class="calendar__day">3</span>
+                                <span class="calendar__day">4</span>
+                                <span class="calendar__day">5</span>
+                                <span class="calendar__day">6</span>
+                                <span class="calendar__day">7</span>
+                                <span class="calendar__day">8</span>
+                                <span class="calendar__day">9</span>
+                                <span class="calendar__day">10</span>
+                                <span class="calendar__day">11</span>
+                                <span class="calendar__day calendar__day--selected">12</span>
+                                <span class="calendar__day">13</span>
+                                <span class="calendar__day">14</span>
+                                <span class="calendar__day">15</span>
+                                <span class="calendar__day">16</span>
+                                <span class="calendar__day">17</span>
+                                <span class="calendar__day">18</span>
+                                <span class="calendar__day">19</span>
+                                <span class="calendar__day">20</span>
+                                <span class="calendar__day">21</span>
+                                <span class="calendar__day">22</span>
+                                <span class="calendar__day">23</span>
+                                <span class="calendar__day">24</span>
+                                <span class="calendar__day">25</span>
+                                <span class="calendar__day">26</span>
+                                <span class="calendar__day">27</span>
+                                <span class="calendar__day">28</span>
+                                <span class="calendar__day">29</span>
+                                <span class="calendar__day">30</span>
+                                <span class="calendar__day">31</span>
+                            </div>
+                        </div>
+                        <div class="time-slots">
+                            <h4 class="time-slots__title">Horarios disponibles</h4>
+                            <div class="time-slots__grid">
+                                <button class="time-slot">09:00</button>
+                                <button class="time-slot">10:00</button>
+                                <button class="time-slot time-slot--selected">11:00</button>
+                                <button class="time-slot">12:00</button>
+                                <button class="time-slot">14:00</button>
+                                <button class="time-slot">15:00</button>
+                                <button class="time-slot">16:00</button>
+                                <button class="time-slot">17:00</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paso 4: Confirmación -->
+                    <div class="agendar__step-content">
+                        <h3 class="agendar__step-title">Confirma tu cita</h3>
+                        <div class="confirm-card">
+                            <div class="confirm-card__icon">✓</div>
+                            <h4 class="confirm-card__title">Resumen de tu cita</h4>
+                            <ul class="confirm-card__list">
+                                <li><strong>Servicio:</strong> Corte de Cabello</li>
+                                <li><strong>Profesional:</strong> Carlos Méndez</li>
+                                <li><strong>Fecha:</strong> Lunes, 12 de Enero de 2026</li>
+                                <li><strong>Hora:</strong> 11:00 AM</li>
+                                <li><strong>Duración:</strong> 45 minutos</li>
+                                <li><strong>Total:</strong> $25.000</li>
+                            </ul>
+                            <button class="btn btn--primary btn--full">Confirmar Reserva</button>
+                        </div>
+                    </div>
+
+                    <!-- Navegación entre pasos -->
+                    <div class="agendar__nav">
+                        <button class="btn btn--ghost">Anterior</button>
+                        <button class="btn btn--primary">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profesionales Destacados -->
+        <section id="profesionales" class="profesionales section">
+            <div class="container">
+                <h2 class="section__title">Nuestros Profesionales</h2>
+                <p class="section__subtitle">Conoce al equipo que cuida tu estilo</p>
+                
+                <div class="profesionales__grid">
+                    <article class="card card--professional">
+                        <div class="card__avatar card__avatar--large">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Carlos Méndez">
+                        </div>
+                        <h4 class="card__name">Carlos Méndez</h4>
+                        <p class="card__role">Especialista en fades y diseños</p>
+                        <div class="card__rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="reviews">124 reseñas</span>
